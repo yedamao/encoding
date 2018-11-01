@@ -65,5 +65,12 @@ func GBK2UCS2(msg []byte) []byte {
 
 func UTF82GBK(msg []byte) []byte {
 	return GB18030(msg).Encode()
+}
 
+func GBK2UTF8(msg []byte) []byte {
+	return GB18030(msg).Decode()
+}
+
+func UCS22UTF8(msg []byte) []byte {
+	return UCS2(msg).Decode()
 }
